@@ -64,7 +64,6 @@ public class UserServiceImpl implements UserService {
             Hotel hotel = forEntity.getBody();
             logger.info("response status code:{}",forEntity.getStatusCode());
             rating.setHotel(hotel);
-
             return rating;
         }).collect(Collectors.toList());
         user.setRatings(ratingList);
